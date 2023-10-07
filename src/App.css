@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.app{
+  font-family: 'Epilogue', sans-serif;
+  position: relative;
+}
+
+/* Header */
+header{
+  padding: 20px 30px;
+}
+
+/* nav */
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .nav-leftside{
+  display: flex;
+}
+nav .nav-leftside .logo{
+  color: hsl(0, 0%, 8%);
+  text-decoration: none;
+}
+nav .nav-leftside .nav-list{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-left: 40px;
+  align-items: center;
+}
+nav .nav-leftside .nav-list li:nth-child(1), 
+nav .nav-leftside .nav-list li:nth-child(2){
+  display: flex;
+  align-items: center;
+}
+nav .nav-leftside .nav-list li:nth-child(1) span,
+nav .nav-leftside .nav-list li:nth-child(2) span{
+  margin-left: 5px;
+}
+nav .nav-leftside .nav-list li a{
+  text-decoration: none;
+  color: hsl(0, 0%, 41%);
+  font-size: small;
+  padding: 10px;
+}
+nav .nav-leftside .nav-list li a:hover{
+  color: hsl(0, 0%, 8%);
+}
+nav .nav-rightside div.buttons{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+nav .nav-rightside div.buttons a{
+  text-decoration: none;
+}
+nav .nav-rightside div.buttons a.login{
+  font-size: small;
+  color: hsl(0, 0%, 41%);
+}
+nav .nav-rightside div.buttons a.register{
+  color: hsl(0, 0%, 41%);
+  font-size: small;
+  border: 1px solid hsl(0, 0%, 41%);
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 1px hsl(0, 0%, 41%);
+}
+nav .nav-rightside div.buttons a.register:hover{
+  border-color: hsl(0, 0%, 8%);
+}
+nav .nav-rightside div.buttons a.login:hover,
+nav .nav-rightside div.buttons a.register:hover{
+  color: hsl(0, 0%, 8%);
+}
+nav .nav-rightside div.hamburger-icon{
+  display: none;
+}
+
+/* Dropdown */
+nav .nav-leftside .nav-list li.nav-item{
+  position: relative;  
+}
+nav .nav-leftside .nav-list li.nav-item a span.arrow-down img{
+  transition: transform 150ms ease-in-out;
+}
+/* nav .nav-leftside .nav-list li.nav-item a:hover span.arrow-down img{
+  transform: rotate(180deg);
+  transition: transform 150ms ease-in-out;
+} */
+nav .nav-leftside .nav-list li.nav-item div.dropdown-list{
+  position: absolute;
+  top: 20px;
+  left: 0;
+  transform: scale(0);
+  transform: translateY(-10px);
+  visibility: hidden;
+  background-color: transparent;
+  z-index: 10;
+  width: 140px;
+  transition: transform 150ms ease-in-out;
+}
+nav .nav-leftside .nav-list li.nav-item div.dropdown-list ul{
+  margin-top: 20px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,.1);
+  display: block;  
+  padding: 10px;  
+  background-color: #fff;
+  list-style: none;
+  border-radius: 5px;
+}
+nav .nav-leftside .nav-list li.nav-item:hover div.dropdown-list{
+  transform: scale(1);
+  visibility: visible; 
+  transition: transform 150ms ease-in-out;
+  transform: translate(0);
+}
+nav .nav-leftside .nav-list li.nav-item div.dropdown-list ul li{
+  width: 100%;
+}
+nav .nav-leftside .nav-list li.nav-item div.dropdown-list ul li img{
+  margin-right: 10px;
+}
+
+nav .nav-leftside .nav-list li.nav-item div.dropdown-list ul li a{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding:5px 10px;
+}
+/* Media Queries */
+@media (max-width:576px){
+  nav .nav-leftside .logo{
+    font-size: 150%;
+  }
+  nav .nav-leftside .nav-list{
+    display: none;
+  }
+  nav .nav-rightside div.buttons{
+    display: none;
+  }
+}
+
+@media (max-width:576px){
+  nav .nav-rightside div.hamburger-icon{
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* hero */
+div.hero{
+  width: 100%;  
+  height: 80vh;
+  padding: 0 8%;
+  display: grid;
+  grid-template-columns: 7fr 5fr;  
+}
+div.hero div.text-content{
+  display: grid;
+  grid-template-rows: 10fr 2fr;
+  
+}
+div.hero div.text-content div.make-remote{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 10%;
+}
+div.hero div.text-content div.make-remote h1{
+  font-size: 400%;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  color: hsl(0, 0%, 8%);
+}
+div.hero div.text-content div.make-remote p{
+  width: 60%;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  color: hsl(0, 0%, 41%);
+}
+div.hero div.text-content div.make-remote a{
+  display: block;
+  width: 150px;
+  text-decoration: none;
+  padding: 15px;
+  background-color: hsl(0, 0%, 8%);
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: bold;
+}
+div.hero div.text-content div.make-remote a:hover{
+  background-color: transparent;
+  color: hsl(0, 0%, 8%);
+  box-shadow: 0px 0px 1px 1px hsl(0, 0%, 8%);
+}
+div.hero div.brands{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 30px;
+}
+div.hero div.brands img{
+  width: 80px;
+}
+div.hero div.image{
+  height: 80vh;
+}
+div.hero div.image img{
+  width: 100%;
+  height: 100%;
+}
+
+/* hero media queries */
+@media screen and (max-width: 768px){
+  div.hero{
+    width: 100%;  
+    height: auto;
+    padding: 0 0%;
+    display: grid;
+    grid-template-columns: 1fr;  
+  }
+  div.hero div.text-content{
+    padding: 20px 5%;
+    order: 2;
+  }
+  div.hero div.text-content div.make-remote{
+    align-items: center;
+    padding-right: 0%;
+    text-align: center;
+  }
+  div.hero div.text-content div.make-remote h1{
+    font-size: 250%;
+  }
+  div.hero div.text-content div.make-remote h1 br{
+    display: none;
+  }
+  div.hero div.text-content div.make-remote p{
+    width: auto;
+    padding: 0 20px;
+  }
+  div.hero div.image{
+    height: 500px;
+  }
+  div.hero div.brands{
+   margin-top: 20px;
+   justify-content: center;
+  }
+}
+
+/* Mobile Nav / Side Nav */
+div.sidenav-wrapper{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.2);
+  visibility: hidden;
+  transition: visibility 250ms ease-in;
+}
+div.sidenav-wrapper.showsidenav-wrapper{
+  visibility: visible;
+  transition: visibility 200ms ease-in;
+}
+div.sidenav{
+  position: fixed;
+  top: 0;
+  right: -250px;
+  background-color: #fff;
+  width: 250px;
+  height: 100%;
+  transition: right 200ms ease-in;
+}
+div.sidenav.show-sidenav{
+  right: 0;
+  transition: right 200ms ease-in;
+}
+div.sidenav nav{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+div.sidenav nav header{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+div.sidenav nav header img{
+  cursor: pointer;
+}
+div.sidenav nav ul.nav-list{
+  display: block;
+  list-style: none;
+  padding: 0 20px;
+  width: 100%;
+}
+div.sidenav nav ul.nav-list li{
+  padding: 8px 0;
+}
+div.sidenav nav ul.nav-list li a{
+  text-decoration: none;
+  color: hsl(0, 0%, 41%);
+  font-size: medium;
+  display: block;
+  padding: 0 10px;
+}
+div.sidenav nav ul.nav-list li a.arrow-down{
+  display: flex;
+}
+div.sidenav nav ul.nav-list li ul.dropdown{
+  list-style: none;
+  margin-left: 20px;
+  margin-top: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease-in-out;
+}
+div.sidenav nav ul.nav-list li:hover ul.dropdown{
+  max-height: 121px;
+  overflow: hidden;
+  transition: 200ms ease-in-out;
+}
+div.sidenav nav ul.nav-list li ul.dropdown li{
+  padding: 5px 0;
+}
+
+div.sidenav nav div.buttons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 200px;
+  text-align: center;
+}
+div.sidenav nav div.buttons a{
+  text-decoration: none;
+}
+div.sidenav nav div.buttons a.login{
+  font-size: medium;
+  color: hsl(0, 0%, 41%);
+}
+div.sidenav nav div.buttons a.register{
+  width: 100%;
+  color: hsl(0, 0%, 41%);
+  font-size: medium;
+  border: 1px solid hsl(0, 0%, 41%);
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 1px hsl(0, 0%, 41%);
+  margin-top: 20px;
+}
+div.sidenav nav div.buttons a.register:hover{
+  border-color: hsl(0, 0%, 8%);
+}
+div.sidenav nav div.buttons a.login:hover,
+div.sidenav nav div.buttons a.register:hover{
+  color: hsl(0, 0%, 8%);
+}
