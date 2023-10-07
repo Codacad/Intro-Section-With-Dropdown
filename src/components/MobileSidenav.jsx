@@ -36,8 +36,8 @@ const MobileSidenav = ({showSidenav, setShowSidenav}) => {
                     <li className="dropdown-item"><Link to={'#'}>Blog</Link></li>
                   </ul>
                 </li>
-                <li className="nav-item"><Link to={'/careers'}>Careers</Link></li>
-                <li className="nav-item"><Link to={'/about'}>About</Link></li>                
+                <li className="nav-item"><Link to={'#'}>Careers</Link></li>
+                <li className="nav-item"><Link to={'#'}>About</Link></li>                
               </ul>
               <div className="buttons">
                 <Link to={'#'} className="login">Login</Link>

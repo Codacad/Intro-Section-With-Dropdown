@@ -38,8 +38,8 @@ const Header = ({showSidenav, setShowSidenav}) => {
                       </ul>
                     </div>
                   </li>
-                  <li className="nav-item"><Link to={'/careers'}>Careers</Link></li>
-                  <li className="nav-item"><Link to={'/about'}>About</Link></li>                
+                  <li className="nav-item"><Link to={'#'}>Careers</Link></li>
+                  <li className="nav-item"><Link to={'#'}>About</Link></li>                
                 </ul>
               </div>
               <div className="nav-rightside">
